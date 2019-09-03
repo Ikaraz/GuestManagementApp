@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ToggleGroup?>
+<BorderPane prefHeight="576.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.defaultName.defaultPackage.AddGuestController">
+   <fx:define>
+      <ToggleGroup fx:id="toggleGroup"/>
+   </fx:define>
+   <top>
+      <Label text="Add New Guest" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+   </top>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+   <left>
+      <VBox spacing="25.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="10.0" layoutY="42.0" text="First name:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" text="Last name:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="35.0" text="Sex:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="60.0" text="Birth date:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="85.0" text="Document type:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="110.0" text="Document number:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="135.0" text="Nationality:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="160.0" text="Place of birth:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="50.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="25.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets top="50.0" />
+         </padding>
+         <children>
+            <TextField fx:id="txtFName" prefHeight="26.0" prefWidth="211.0" />
+            <TextField fx:id="txtLName" layoutX="10.0" layoutY="60.0" prefHeight="26.0" prefWidth="217.0" />
+            <Group>
+               <HBox>
+                  <children>
+                        <RadioButton fx:id="radioMale" mnemonicParsing="false" selected="true" text="Male" toggleGroup="$toggleGroup" />
+                        <RadioButton fx:id="radioFemale" mnemonicParsing="false" text="Female" toggleGroup="$toggleGroup" />
+                  </children>
+               </HBox>
+            </Group>
+            <DatePicker fx:id="birthDatePicker" />
+            <ComboBox fx:id="comboDocType" prefWidth="150.0" />
+            <TextField fx:id="txtDocNo" layoutX="10.0" layoutY="111.0" prefHeight="26.0" prefWidth="232.0" />
+            <TextField fx:id="txtNationality" layoutX="10.0" layoutY="307.0" prefHeight="26.0" prefWidth="232.0" />
+            <TextField fx:id="txtPlaceOfBirth" layoutX="10.0" layoutY="358.0" prefHeight="26.0" prefWidth="232.0" />
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" spacing="150.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#btnAddClicked" prefHeight="42.0" prefWidth="89.0" text="Add" />
+            <Button layoutX="107.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnCancelClicked" prefHeight="42.0" prefWidth="89.0" text="Cancel" />
+         </children>
+         <BorderPane.margin>
+            <Insets top="40.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>
