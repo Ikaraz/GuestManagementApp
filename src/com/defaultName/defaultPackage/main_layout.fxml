@@ -76,7 +76,10 @@
                        </VBox>
                        <VBox spacing="25.0">
                            <children>
-                               <TextField fx:id="txtID" editable="false" layoutX="10.0" layoutY="60.0" maxWidth="-Infinity" opacity="0.3" prefHeight="26.0" prefWidth="90.0" />
+                               <TextField fx:id="txtID" editable="false" layoutX="10.0" layoutY="60.0" maxWidth="-Infinity" opacity="0.3" prefHeight="26.0" prefWidth="90.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></TextField>
                                <TextField fx:id="txtFName" maxWidth="-Infinity" prefHeight="26.0" prefWidth="200.0" />
                                <TextField fx:id="txtLName" layoutX="10.0" layoutY="60.0" maxWidth="-Infinity" prefHeight="26.0" prefWidth="200.0" />
                                <Group>
@@ -117,15 +120,15 @@
              <children>
                  <TableView fx:id="tableView" onMouseClicked="#tableMouseClicked" VBox.vgrow="ALWAYS">
                      <columns>
-                         <TableColumn fx:id="colId" prefWidth="43.0" text="id" />
-                         <TableColumn fx:id="colFName" prefWidth="107.0" text="First Name" />
-                         <TableColumn fx:id="colLName" prefWidth="125.0" text="Last Name" />
-                         <TableColumn fx:id="colSex" prefWidth="75.0" text="Sex" />
-                         <TableColumn fx:id="colBDate" prefWidth="89.0" text="Birth Date" />
-                         <TableColumn fx:id="colDType" prefWidth="117.0" text="Doc. Type" />
-                         <TableColumn fx:id="colDNo" prefWidth="119.0" text="Doc. Number" />
-                         <TableColumn fx:id="colNation" prefWidth="100.0" text="Nationality" />
-                         <TableColumn fx:id="colBPlace" prefWidth="100.0" text="Birth Place" />
+                         <TableColumn fx:id="colId" maxWidth="43.0" minWidth="43.0" prefWidth="43.0" resizable="false" text="id" />
+                         <TableColumn fx:id="colFName" prefWidth="125.0" resizable="false" text="First Name" />
+                         <TableColumn fx:id="colLName" prefWidth="125.0" resizable="false" text="Last Name" />
+                         <TableColumn fx:id="colSex" prefWidth="75.0" resizable="false" text="Sex" />
+                         <TableColumn fx:id="colBDate" prefWidth="89.0" resizable="false" text="Birth Date" />
+                         <TableColumn fx:id="colDType" prefWidth="117.0" resizable="false" text="Doc. Type" />
+                         <TableColumn fx:id="colDNo" prefWidth="119.0" resizable="false" text="Doc. Number" />
+                         <TableColumn fx:id="colNation" prefWidth="100.0" resizable="false" text="Nationality" />
+                         <TableColumn fx:id="colBPlace" prefWidth="106.0" resizable="false" text="Birth Place" />
                      </columns>
                  </TableView>
                  <Group>
